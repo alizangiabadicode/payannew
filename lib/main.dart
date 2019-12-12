@@ -5,7 +5,7 @@ import 'package:payan/worker.dart';
 void main() => runApp(MaterialApp(
  // home: Location(addrees: "بهمنیار 22  ",description: " مسجد و مهدیه برای مراسمات", rating:5 ,title: "مسجد علی اکبر",),
   title: "محل",
-  home: worker(),
+  home: Location(),
 
 ));
 
