@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-class PlaceCard extends StatelessWidget {  
+class WorkerCard extends StatelessWidget {  
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -10,7 +10,7 @@ class PlaceCard extends StatelessWidget {
       child: GestureDetector(
         onTap: (){
         },
-        child:Column(
+        child:Row(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
