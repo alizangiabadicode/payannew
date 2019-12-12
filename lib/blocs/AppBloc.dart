@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:payan/pages/dead_line.dart';
 import 'package:payan/router/Router.dart';
 
 final GlobalKey<NavigatorState> homeNavigationKey =GlobalKey();
 
 class AppBloc extends ChangeNotifier{
-  int _mainPageBodyIndex = 1;
+  int _mainPageBodyIndex = 0;
   
   List<Widget> _mainPages=[
     Navigator(
@@ -12,7 +13,7 @@ class AppBloc extends ChangeNotifier{
       initialRoute: 'home',
       onGenerateRoute: FluroRouter.router.generator,
     ),
-    Container(color: Colors.red,)    
+    DeadLine()
   ];
 
   Widget get mainPageBody=>IndexedStack(children:_mainPages,index: mainPageBodyIndex);
@@ -26,7 +27,7 @@ class AppBloc extends ChangeNotifier{
     }
     return null;
   } 
-  void bottomNavigationOnTap(BuildContext context,int index){
+  void bottomNavigationOnTap(int index){
     _mainPageBodyIndex=index;
     notifyListeners();
   }

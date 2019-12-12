@@ -22,10 +22,10 @@ class App extends StatelessWidget {
         ChangeNotifierProvider<AppBloc>.value(
           value: AppBloc(),
         ),
-          
       ] ,
       child: MaterialApp(
         navigatorKey: mainNavigationKey,
+        debugShowCheckedModeBanner: false,
         title: 'جاودانه',
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
@@ -36,7 +36,7 @@ class App extends StatelessWidget {
         ],
         locale: Locale("fa", "IR"),
         theme:ThemeData(
-          primaryColor: Colors.indigo
+          primaryColor: Colors.blueGrey
         ),
         initialRoute: 'mainPage',
         onGenerateRoute: FluroRouter.router.generator
