@@ -90,22 +90,45 @@ class Location extends StatelessWidget {
                 color: Colors.black,
                 fontSize: 20,
               )),
-          FlatButton(
-            child: Container(
-              width: 150,
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  color: Colors.black54,
-                  borderRadius: BorderRadius.all(Radius.circular(18))),
-              child: Center(
-                  child: Text(
-                "رزرو",
-                style: TextStyle(color: Colors.white, fontSize: 15),
-              )),
-            ),
-            onPressed: () {
-              //TODO reserve
-            },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              FlatButton(
+                 child: Container(
+                  width: 150,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.black54,
+                      borderRadius: BorderRadius.all(Radius.circular(18))),
+                  child: Center(
+                      child: Text(
+                    "ارتباط",
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  )),
+                ),
+                onPressed: () {
+                  //TODO reserve
+                },
+              
+              )
+              ,FlatButton(
+                child: Container(
+                  width: 150,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.black54,
+                      borderRadius: BorderRadius.all(Radius.circular(18))),
+                  child: Center(
+                      child: Text(
+                    "رزرو",
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  )),
+                ),
+                onPressed: () {
+                  //TODO reserve
+                },
+              ),
+            ],
           )
         ],
       ),
