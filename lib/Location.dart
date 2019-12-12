@@ -8,7 +8,7 @@ class Location extends StatelessWidget {
   String addrees;
   int rating;
   Location({this.addrees, this.description, this.rating, this.title});
-   Widget top = Stack(
+  Widget top = Stack(
     children: <Widget>[
       ImagesSlider(
           items: map<Widget>(imgs, (index, i) {
@@ -107,7 +107,7 @@ class Location extends StatelessWidget {
                   )),
                 ),
                 onPressed: () {
-                  //TODO reserve
+                  //TODO contact
                 },
               
               )
