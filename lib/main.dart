@@ -36,7 +36,7 @@ class App extends StatelessWidget {
         ],
         locale: Locale("fa", "IR"),
         theme:ThemeData(
-          primaryColor: Colors.blueGrey
+          primaryColor: Colors.purple[900]
         ),
         initialRoute: 'mainPage',
         onGenerateRoute: FluroRouter.router.generator

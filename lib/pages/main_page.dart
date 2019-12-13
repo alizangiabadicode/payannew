@@ -8,7 +8,12 @@ class MainPAge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appBloc=Provider.of<AppBloc>(context);
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: ()async{
+        // pop main navigator if nested navigator cant pop
+        return Future.value(!await appBloc.currentNavigatorKey().currentState.maybePop());
+      },
+      child:Scaffold(
       appBar: AppBar(
         title: Text('جاودانه'),
         centerTitle: true,
@@ -27,6 +32,7 @@ class MainPAge extends StatelessWidget {
           ),
         ],
         onTap: appBloc.bottomNavigationOnTap,
+      ),
       ),
     );
   }

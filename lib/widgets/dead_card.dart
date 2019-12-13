@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 
 class DeadCard extends StatelessWidget {
-  const DeadCard({Key key}) : super(key: key);
-
+  String name;
+  DeadCard(this.name);
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('امیرحسن امیرماهانی'),
+      title: Text(name),
       leading: CircleAvatar(
         backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
       ) ,

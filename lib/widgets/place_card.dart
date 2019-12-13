@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:payan/models/place.dart';
+import 'package:payan/widgets/image_slider.dart';
+
 
 
 class PlaceCard extends StatelessWidget {  
+  Place place;
+  PlaceCard(this.place);
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.topCenter,
       child: GestureDetector(
         onTap: (){
+          Navigator.of(context).pushNamed('place/'+place.id.toString());
         },
         child:Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -37,7 +43,7 @@ class PlaceCard extends StatelessWidget {
                         height: double.infinity,
                         child: ClipRRect(
                           borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10)),
-                          child:1>0?Image.network('https://via.placeholder.com/1600x900'):Center(child:Icon(FontAwesomeIcons.playCircle,),),
+                          child:Image.network("https://via.placeholder.com/1600x900"),
                         ),
                       ),
                       Positioned(
@@ -87,7 +93,7 @@ class PlaceCard extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only( right: 12,top: 12 ,bottom: 4),
                     child: Text(
-                      'رستوران ایکس',
+                      place.title,
                       style: Theme.of(context).textTheme.subhead.copyWith(fontWeight: FontWeight.w700,color: Color(0xff565656)),
                       textAlign: TextAlign.left,
                     ),
@@ -96,7 +102,7 @@ class PlaceCard extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal:12,vertical:5),
                     child: Row(children: <Widget>[
                       Padding(child:Icon(FontAwesomeIcons.users,size: 17,),padding: EdgeInsets.only(left: 10),),
-                      Text('120')
+                      Text(place.capacity.toString())
                     ],),
                   ),
                 ],
