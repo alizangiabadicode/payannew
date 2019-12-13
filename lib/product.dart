@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
 
-class worker extends StatelessWidget {
+class product extends StatelessWidget {
   String title;
-  String work_description;
-  String address;
+  String workerName;
+  String cost;
   String cat;
 
-  // String title="" + "قصابی سهیل";
-  // String cat=" دسته ی" + " ذبح و گوشت";
-  // String work_description= "توضیحات  " +
-  //                           "\n" +
-  //                           "قصاب شخصی است که می تواند حیوانات را ذبح کند ، گوشت آنها را خرد کند ، گوشت خود را بفروشد یا در هر ترکیبی از این سه کار شرکت کند. آنها ممکن است برش های استاندارد گوشت و مرغ را برای فروش در مراکز خرده فروشی یا عمده فروشی تهیه کنند"
-  //                       ;
-  // String address="آدرس  " + " کرمان خیابان سرباز کوچه 5";
-//List<Preoduct> products
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,13 +34,13 @@ class worker extends StatelessWidget {
                       Column(
                         children: <Widget>[
                           Text(
-                            "" + "قصابی سهیل",
+                              " گریه و ناله",
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                             textDirection: TextDirection.rtl,
                           ),
                           Text(
-                            " دسته ی" + " ذبح و گوشت",
+                            " دسته ی" + " گریه ",
                             textDirection: TextDirection.rtl,
                           ),
                         ],
@@ -68,7 +60,7 @@ class worker extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(18))),
                           child: Center(
                               child: Text(
-                            "ارتباط",
+                            "رزرو",
                             style: TextStyle(color: Colors.white, fontSize: 15),
                             textDirection: TextDirection.rtl,
                           )),
@@ -88,7 +80,7 @@ class worker extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(18))),
                           child: Center(
                               child: Text(
-                            "محصولات",
+                            "سفارش محصول",
                             style: TextStyle(color: Colors.white, fontSize: 15),
                             textDirection: TextDirection.rtl,
                           )),
@@ -103,13 +95,13 @@ class worker extends StatelessWidget {
                     child: Text(
                         "توضیحات  " +
                             "\n" +
-                            "قصاب شخصی است که می تواند حیوانات را ذبح کند ، گوشت آنها را خرد کند ، گوشت خود را بفروشد یا در هر ترکیبی از این سه کار شرکت کند. آنها ممکن است برش های استاندارد گوشت و مرغ را برای فروش در مراکز خرده فروشی یا عمده فروشی تهیه کنند",
+                            "گریه با جاری شدن اشک از چشمان و در بسیاری موارد با ناله و تغییر حالت دهان همراه است. گریه واکنش و نمود ایجاد وضعیتی احساسی است. اغلب گریه در مواقعی که فرد غمگین است صورت می‌گیرد",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                         textDirection: TextDirection.rtl),
                   ),
                   Center(
-                      child: Text("آدرس  " + " کرمان خیابان سرباز کوچه 5",
+                      child: Text("قیمت  " + " 2500000",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                           textDirection: TextDirection.rtl)),
