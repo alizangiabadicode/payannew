@@ -3,11 +3,12 @@ import 'package:payan/Location.dart';
 import 'package:payan/product.dart';
 import 'package:payan/reservepage.dart';
 import 'package:payan/worker.dart';
+import 'splash.dart' as splash;
 
 void main() => runApp(MaterialApp(
  // home: Location(addrees: "بهمنیار 22  ",description: " مسجد و مهدیه برای مراسمات", rating:5 ,title: "مسجد علی اکبر",),
-  title: "محل",
-  home: product(),
+ // title: "محل",
+  home: splash.MyApp(),
 
 ));
 
